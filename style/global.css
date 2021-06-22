@@ -27,6 +27,7 @@ html{
 }
 
 body {
+    display: flex;
     height: 100vh;
     background-color: var(--background);
 }
@@ -55,11 +56,48 @@ body, button, input, textarea {
 /* ******* input and buttons ******** */
 button, input, .button{
     border-radius: 0.8rem;
-    height: 0.5rem;
+    height: 5rem;
 }
 
 button, .button{
     font-family: 'Poppins';
     font-weight: 500;
     line-height: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: var(--blue);
+    color: var(--white);
+    
+    cursor: pointer;
+
+    transition: filter .2s; /*transição do filtro de 2 seguntos*/
+}
+
+button:hover, .button:hover{
+    filter: brightness(1.2); /*aplica brilho*/
+}
+
+button > img,
+.button> img {
+    margin-right: 1rem;
+    width: 2rem;
+}
+
+button.outLined,
+.button.outLined{
+    background-color: var(--white);
+    color: var(--blue);
+    border: .2rem solid var(--blue);
+}
+
+.content header{
+    width: 80%;
+    margin: 3.5rem auto;
+}
+
+.content header img{
+    width: 16.7rem;
 }
