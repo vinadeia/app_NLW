@@ -21,6 +21,7 @@ html{
     --grey-dark: #4d5e77;
     --grey-blue: #a1b2cd;
     --grey-light: #e5eaf1;
+    --grey-medium: #eaecf2;
 
     /* 1rem = 16px (User Agent) = 100% (user agent)*/
     font-size: 62.5%; /* 10px */
@@ -39,7 +40,7 @@ body, button, input, textarea {
     /* font-family: 'Poppins', sans-serif; */
 }
 .content{
-    width: 100%;
+    /* width: 100%; */
     margin: 0 auto;
 }
 .sr-only{
@@ -93,6 +94,19 @@ button.outLined,
     border: .2rem solid var(--blue);
 }
 
+button.red,
+.button.red{
+    background-color: var(--red);
+    color: var(--white);
+}
+
+button.grey,
+.button.grey{
+    background-color: var(--grey-light);
+    color: var(--grey-dark);
+}
+
+/* HEADER */
 .content header{
     width: 80%;
     margin: 3.5rem auto;
