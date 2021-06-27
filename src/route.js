@@ -7,9 +7,11 @@ const route = express.Router()
 route.get('/', (req, res) => res.render("index", {page: 'enter-room'}))    // req == requisição da rota  res == response
 route.get('/create-pass', (req, res) => res.render("index", {page: 'create-pass'}))
 
-route.get('/room/:room', (req, res) => res.render("room"))
+route.get('/room/:room', roomController.open)
+route.post('/enter-room', roomController.enter)
 
 //Formato que o formulatio de dentro da modal tem que passar a informação
+route.post('/question/create/:room', questionController.create)
 route.post('/question/:room/:question/:action', questionController.index)
 route.post('/create-room', roomController.create)
 
